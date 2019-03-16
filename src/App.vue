@@ -6,6 +6,7 @@
       <router-link to="/directive">Directive</router-link> |
       <router-link to="/filters-mixins">FiltersMixins</router-link> |
       <router-link to="/animations">Animations</router-link> |
+      <router-link to="/monster-slayer">Monster</router-link> |
     </div>
     <router-view />
   </div>

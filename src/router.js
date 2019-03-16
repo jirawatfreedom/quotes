@@ -41,5 +41,10 @@ export default new Router({
       name: 'animations',
       component: () => import(/* webpackChunkName: "about" */ './views/Animations.vue'),
     },
+    {
+      path: '/monster-slayer',
+      name: 'monster-slayer',
+      component: () => import(/* webpackChunkName: "about" */ './views/MonsterSlayer.vue'),
+    },
   ],
 });
