@@ -6,6 +6,7 @@ import store from './store';
 import './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import './assets/animate.css';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);

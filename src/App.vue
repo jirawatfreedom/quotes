@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <router-link to="/">Home</router-link> | <router-link to="/about">About</router-link> |
       <router-link to="/form">Form</router-link> |
       <router-link to="/directive">Directive</router-link> |
       <router-link to="/filters-mixins">FiltersMixins</router-link> |
+      <router-link to="/animations">Animations</router-link> |
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

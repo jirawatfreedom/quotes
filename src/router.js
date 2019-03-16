@@ -36,5 +36,10 @@ export default new Router({
       name: 'filters-mixins',
       component: () => import(/* webpackChunkName: "about" */ './views/FiltersMixins.vue'),
     },
+    {
+      path: '/animations',
+      name: 'animations',
+      component: () => import(/* webpackChunkName: "about" */ './views/Animations.vue'),
+    },
   ],
 });
