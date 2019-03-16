@@ -21,5 +21,20 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
+    {
+      path: '/form',
+      name: 'form',
+      component: () => import(/* webpackChunkName: "about" */ './views/Form.vue'),
+    },
+    {
+      path: '/directive',
+      name: 'directive',
+      component: () => import(/* webpackChunkName: "about" */ './views/Directive.vue'),
+    },
+    {
+      path: '/filters-mixins',
+      name: 'filters-mixins',
+      component: () => import(/* webpackChunkName: "about" */ './views/FiltersMixins.vue'),
+    },
   ],
 });

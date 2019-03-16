@@ -29,7 +29,7 @@ export default {
         return console.log('Please delete Quotes first!');
       }
       this.quotes.push(quote);
-      return "Plase";
+      return 'Plase';
     },
     deleteQuote(index) {
       this.quotes.splice(index, 1);
