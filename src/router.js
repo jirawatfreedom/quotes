@@ -51,5 +51,14 @@ export default new Router({
       name: 'firebase',
       component: () => import(/* webpackChunkName: "about" */ './views/Firebase.vue'),
     },
+    {
+      path: '/router',
+      name: 'router',
+      component: () => import('./views/Router.vue'),
+    },
+    {
+      path: '*',
+      redirect: '/',
+    },
   ],
 });
