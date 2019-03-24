@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
+import VueResource from 'vue-resource';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -12,6 +13,7 @@ import './assets/css/app.css';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
+Vue.use(VueResource);
 Vue.directive('highlight', {
   bind(el, binding, vnode) {
     let delay = 0;

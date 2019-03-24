@@ -46,5 +46,10 @@ export default new Router({
       name: 'monster-slayer',
       component: () => import(/* webpackChunkName: "about" */ './views/MonsterSlayer.vue'),
     },
+    {
+      path: '/firebase',
+      name: 'firebase',
+      component: () => import(/* webpackChunkName: "about" */ './views/Firebase.vue'),
+    },
   ],
 });

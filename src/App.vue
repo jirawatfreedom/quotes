@@ -7,6 +7,7 @@
       <router-link to="/filters-mixins">FiltersMixins</router-link> |
       <router-link to="/animations">Animations</router-link> |
       <router-link to="/monster-slayer">Monster</router-link> |
+      <router-link to="/firebase">Firebase</router-link> |
     </div>
     <router-view />
   </div>
