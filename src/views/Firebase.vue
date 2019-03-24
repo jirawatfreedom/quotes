@@ -45,24 +45,16 @@ export default {
         email: '',
       },
       users: [],
+      resource: {},
+      node: 'data',
     };
   },
   methods: {
     submit() {
-      console.log(this.user);
-      this.$http.post('https://quotes-2931f.firebaseio.com/data.json', this.user).then(
-        (response) => {
-          console.log(response);
-        },
-        (error) => {
-          console.log(error);
-        },
-      );
+      this.resource.saveAlt(this.user);
     },
     fetchData() {
-      console.log(this.user);
-      this.$http
-        .get('https://quotes-2931f.firebaseio.com/data.json')
+      this.resource.getData({ node: this.node })
         .then(response => response.json())
         .then((data) => {
           const resultArray = [];
@@ -72,6 +64,13 @@ export default {
           this.users = resultArray;
         });
     },
+  },
+  created() {
+    const customActions = {
+      saveAlt: { method: 'POST', url: 'alternative.json' },
+      getData: { method: 'GET' },
+    };
+    this.resource = this.$resource('{node}.json', {}, customActions);
   },
 };
 </script>

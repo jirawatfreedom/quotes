@@ -14,6 +14,17 @@ import './assets/css/app.css';
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueResource);
+Vue.http.options.root = 'https://quotes-2931f.firebaseio.com/';
+Vue.http.interceptors.push((request, next) => {
+  console.log(request);
+  if (request.method == 'POST') {
+    request.method = 'PUT';
+  }
+  next(response => {
+    response.json = () => { return {messages: response.body} }
+  });
+});
+
 Vue.directive('highlight', {
   bind(el, binding, vnode) {
     let delay = 0;
