@@ -1,13 +1,16 @@
 <template>
-  <p>Counter is: {{ counter }}</p>
+    <p>Counter is: {{ counter }}</p>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import * as types from '../store/types';
+
 export default {
   computed: {
-    counter() {
-      return this.$store.state.counter;
-    },
+    ...mapGetters({
+      counter: types.DOUBLE_COUNTER,
+    }),
   },
 };
 </script>
