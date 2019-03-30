@@ -9,6 +9,7 @@
       <router-link to="/monster-slayer">Monster</router-link> |
       <router-link to="/firebase">Firebase</router-link> |
       <router-link to="/router">Router</router-link> |
+      <router-link to="/my-vuex">My Vuex</router-link> |
     </div>
     <router-view />
   </div>

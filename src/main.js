@@ -1,27 +1,29 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import BootstrapVue from 'bootstrap-vue';
 import VueResource from 'vue-resource';
 import App from './App.vue';
 import router from './router';
-import store from './store';
 import './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/css/animate.css';
 import './assets/css/foundation.min.css';
 import './assets/css/app.css';
+import { store } from './store/store';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VueResource);
+Vue.use(Vuex);
 Vue.http.options.root = 'https://quotes-2931f.firebaseio.com/';
 Vue.http.interceptors.push((request, next) => {
   console.log(request);
-  if (request.method == 'POST') {
+  if (request.method === 'POST') {
     request.method = 'PUT';
   }
-  next(response => {
-    response.json = () => { return {messages: response.body} }
+  next((response) => {
+    response.json = () => ({ messages: response.body });
   });
 });
 
@@ -47,6 +49,7 @@ Vue.mixin({
     console.log('Global Mixin - Created Hook');
   },
 });
+
 new Vue({
   router,
   store,

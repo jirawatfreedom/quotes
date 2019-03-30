@@ -52,6 +52,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Firebase.vue'),
     },
     {
+      path: '/my-vuex',
+      name: 'my-vuex',
+      component: () => import('./views/MyVuex.vue'),
+    },
+    {
       path: '/router',
       name: 'router',
       component: () => import('./views/Router.vue'),
